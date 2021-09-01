@@ -9,12 +9,14 @@ function App() {
   const [queryObject, setQueryObject] = useState("");
 
   return (
-    <div className='body bg-indigo-700 min-h-screen'>
-      <h1 className='font-bold font-mono text-4xl text-center mb-12 tracking-wide'>
+    <div className='content'>
+      <h1 className='font-bold font-mono text-4xl text-center mb-12 tracking-wide '>
         Weather Forecast App
       </h1>
-      <Form setQueryObject={setQueryObject} />
-      <Forecast queryObject={queryObject} />
+      <div className='wrapper'>
+        <Form setQueryObject={setQueryObject} />
+        <Forecast queryObject={queryObject} />
+      </div>
     </div>
   );
 }

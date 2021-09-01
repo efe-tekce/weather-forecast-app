@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  width: 900px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.result-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 80px repeat(3, 1fr);
+}
+
+.card-title {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.card-title .city {
+  font-size: 1.7rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  text-align: start;
+}
+
+.weather-section {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 30px 0;
+  border-bottom: 1px solid lightgray;
+}
+
+.weather-section p {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.details {
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 30px 1fr;
+}
+
+.details:nth-child(2n) {
+  border-left: 1px solid lightgray;
+}
+
+.details h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  grid-column: span 2;
+}
+
+.details img {
+  place-self: center;
+}
+
+.details p {
+  font-size: 1.8rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  place-self: center;
+}
