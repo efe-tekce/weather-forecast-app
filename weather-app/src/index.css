@@ -2,28 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
+html {
+  font-family: "Work Sans", sans-serif;
+}
 body {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://images.unsplash.com/photo-1520985244272-9d0b8067a4ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1824&q=80");
+  background-position: center;
+  background-repeat: space;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .content {
-  width: 900px;
+  width: 100%;
+  max-width: 900px;
+  height: 600px;
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-content: center;
 }
 
 .wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .result-card {
+  max-width: 466px;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 80px repeat(3, 1fr);
+}
+
+.filter-card {
+  max-width: 466px;
 }
 
 .card-title {

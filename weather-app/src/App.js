@@ -6,16 +6,15 @@ import Form from "./Form";
 import "./index.css";
 
 function App() {
-  const [queryObject, setQueryObject] = useState("");
-
+  const [queryObject, setQueryObject] = useState({});
   return (
-    <div className='content'>
-      <h1 className='font-bold font-mono text-4xl text-center mb-12 tracking-wide '>
+    <div className='content mt-16 mx-auto'>
+      <h1 className=' font-bold font-mono text-4xl text-gray-500 text-center tracking-wide '>
         Weather Forecast App
       </h1>
-      <div className='wrapper'>
+      <div className='wrapper mx-auto flex-col md:flex-row md:w-full'>
         <Form setQueryObject={setQueryObject} />
-        <Forecast queryObject={queryObject} />
+        {queryObject?.query && <Forecast queryObject={queryObject} />}
       </div>
     </div>
   );
